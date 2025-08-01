@@ -7,7 +7,7 @@ sudo apt update
 sudo apt install -y cups hplip avahi-daemon system-config-printer
 sudo systemctl enable --now cups avahi-daemon
 sudo usermod -aG lpadmin "$USER"
-echo "🔧 Configuring CUPS to allow web access from local network only..."
+echo "Configuring CUPS to allow web access from local network only..."
 sudo sed -i 's/^Listen localhost:631/Port 631/' /etc/cups/cupsd.conf
 sudo bash -c 'cat > /etc/cups/cupsd.conf <<EOF
 LogLevel warn
@@ -42,7 +42,7 @@ until USB_ID=$(lsusb | grep -i HP | awk '{print $6}' | head -n1) && [ -n "$USB_I
   echo "No HP USB device found. Please connect your HP printer via USB."
   sleep 3
 done
-PRINTER_NAME=HP-Printer
+PRINTER_NAME="HP-Printer"
 DEVICE_NAME=$(uname -n)
 echo "Installing printer via HPLIP..."
 sudo hp-setup -i -b usb -p$PRINTER_NAME
