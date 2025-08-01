@@ -41,6 +41,7 @@ until USB_ID=$(lsusb | grep -i HP | awk '{print $6}' | head -n1) && [ -n "$USB_I
   sleep 3
 done
 PRINTER_NAME="HP Printer"
+DEVICE_NAME=$(uname -n)
 echo "🛠️ Installing printer via HPLIP..."
 sudo hp-setup -i -b usb -p$PRINTER_NAME
 sudo lpadmin -p "$PRINTER_NAME" -o printer-is-shared=true
@@ -49,3 +50,4 @@ echo ""
 echo "✅ Setup complete!"
 echo "🌐 CUPS Web Interface: http://$(hostname).local:631"
 echo "🖨️ Printer Name: $PRINTER_NAME"
+echo "🖨️ Your Printer Will Apear As $PRINTER_NAME @ $DEVICE_NAME"
