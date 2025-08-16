@@ -4,6 +4,7 @@ This Bash script sets up a CUPS print server with wireless printing support for 
 | Tested Device  | OS                  | Printer                  |
 |---------------|---------------------|--------------------------|
 | Raspberry Pi 5 | Ubuntu Server 25.04 | HP Color LaserJet CP2025n |
+| Raspberry Pi Zero 2 W | Ubuntu Server 25.04 | HP Color LaserJet CP2025n |
 
 ## How to use
 
