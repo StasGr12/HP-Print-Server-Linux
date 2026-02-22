@@ -20,7 +20,7 @@ This Bash script sets up a CUPS print server with wireless printing support for 
     ./setup.sh
     ```
 
-4. (optional) If your printer requires a plug-in driver (check under **Driver Plug-in** on the [official HPLIP supported devices list](https://developers.hp.com/hp-linux-imaging-and-printing/supported_devices/index)), run this command:
+4. If your printer requires a plug-in driver (check under **Driver Plug-in** on the [official HPLIP supported devices list](https://developers.hp.com/hp-linux-imaging-and-printing/supported_devices/index)), run this command:
 
     ```
     hp-plugin -i --required
