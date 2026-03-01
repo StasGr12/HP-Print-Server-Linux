@@ -1,6 +1,7 @@
 # HP-Print-Server-Linux
 This Bash script sets up a CUPS print server with wireless printing support for an HP USB printer on Ubuntu/Debian.
 
+## Verified Devices 
 | Tested Device  | OS                  | Printer                  |
 |---------------|---------------------|--------------------------|
 | Raspberry Pi 5 | Ubuntu Server 25.04 | HP Color LaserJet CP2025n |
