@@ -1,5 +1,7 @@
 # HP-Print-Server-Linux
 This Bash script sets up a CUPS print server with wireless printing support for an HP USB printer on Ubuntu/Debian.
+## Warning
+Before using the script check if your printer supports printing via USB on the [HPLIP supported devices list](https://developers.hp.com/hp-linux-imaging-and-printing/supported_devices/index).
 
 ## Verified Devices 
 | Tested Device  | OS                  | Printer                  |
@@ -9,11 +11,9 @@ This Bash script sets up a CUPS print server with wireless printing support for 
 
 ## How to use
 
-1. Verify your HP printer supports USB connectivity (check under **Connectivity USB Network Parallel**) on the [official HPLIP supported devices list](https://developers.hp.com/hp-linux-imaging-and-printing/supported_devices/index).
+1. Connect your printer to your machine via USB.
 
-2. Connect your printer to your machine via USB.
-
-3. Download and run the setup script:
+2. Download and run the setup script:
 
     ```
     wget https://raw.githubusercontent.com/StasGr12/HP-Print-Server-Linux/refs/heads/main/setup.sh
@@ -21,10 +21,10 @@ This Bash script sets up a CUPS print server with wireless printing support for 
     ./setup.sh
     ```
 
-4. If your printer requires a plug-in driver (check under **Driver Plug-in** on the [official HPLIP supported devices list](https://developers.hp.com/hp-linux-imaging-and-printing/supported_devices/index)), run this command:
+3. If your printer requires a plug-in driver (check under **Driver Plug-in** on the [official HPLIP supported devices list](https://developers.hp.com/hp-linux-imaging-and-printing/supported_devices/index)), run this command:
 
     ```
     hp-plugin -i --required
     ```
 
-5. Enjoy wireless printing!
+4. Enjoy wireless printing!
